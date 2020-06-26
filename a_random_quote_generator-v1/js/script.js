@@ -63,22 +63,24 @@ function getRandomQuote (arr) {
 console.log(getRandomQuote(quotes));
 
 function printQuote () {
-  let quoteObject = getRandomQuote();
-  let webString = '<p class="quote"> quoteObject.quote  </p>'
-                '<p class="source"> quoteObject.source' 
+  let quoteObject = getRandomQuote(arr);
+  let webString = document.getElementById('quote-box').innerHTML = printQuote;
+                `<p class="quote"> ${quoteObject.quote}  </p>`
+                `<p class="source"> ${quoteObject.source}` 
                 if (citation) {
-                  '<span class="citation"> quoteObject.citation </span>' 
+                  `<span class="citation"> ${quoteObject.citation} </span>` 
                 }
                 if (year) {
-                  '<span class="year"> quoteObject.year </span>' 
+                  `<span class="year"> ${quoteObject.year} </span> 
                   
-                } '</p>'
-              }
+                 </p>` }
+              
 
-              document.getElementById('quote-box').innerHTML = printQuote;
+  printQuote()
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+              }
