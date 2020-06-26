@@ -49,9 +49,10 @@ let quotes = [
 // Do I need to run this function through a for loop?  
 function getRandomQuote (arr) {
   let randomGenerator = Math.floor(Math.random() * arr.length);
-  return arr[randomGenerator];
-
+  return arr[randomGenerator]; 
 }
+
+
 
 
 
@@ -72,9 +73,9 @@ function printQuote () {
                   '<span class="year"> quoteObject.year </span>' 
                   
                 } '</p>'
+              }
 
-
-
+              document.getElementById('quote-box').innerHTML = printQuote;
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
