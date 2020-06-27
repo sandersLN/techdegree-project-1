@@ -48,8 +48,8 @@ let quotes = [
 ***/
 // Do I need to run this function through a for loop?  
 function getRandomQuote (arr) {
-  let randomGenerator = Math.floor(Math.random() * arr.length);
-  return arr[randomGenerator]; 
+  let randomGenerator = Math.floor(Math.random() * quotes.length);
+  return quotes[randomGenerator]; 
 }
 
 
@@ -62,21 +62,21 @@ function getRandomQuote (arr) {
 ***/
 console.log(getRandomQuote(quotes));
 
-function printQuote () {
-  let quoteObject = getRandomQuote(arr);
-  let webString = document.getElementById('quote-box').innerHTML = printQuote;
-                `<p class="quote"> ${quoteObject.quote}  </p>`
-                `<p class="source"> ${quoteObject.source}` 
+function printQuote (arr) {
+  let quoteObject = getRandomQuote(quotes);
+  let webString = document.getElementById('quote-box').innerHTML = quotes;
+                `<p class="quote"> ${randomQuote.quote}  </p>`
+                `<p class="source"> ${randomQuote.source}` 
                 if (citation) {
-                  `<span class="citation"> ${quoteObject.citation} </span>` 
+                  `<span class="citation"> ${randomQuote.citation} </span>` 
                 }
                 if (year) {
-                  `<span class="year"> ${quoteObject.year} </span> 
+                  `<span class="year"> ${randomQuote.year} </span> 
                   
                  </p>` }
               
 
-  printQuote()
+  printQuote();
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
