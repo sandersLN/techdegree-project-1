@@ -73,7 +73,9 @@ function printQuote (arr) {
                 if (year) {
                   `<span class="year"> ${randomQuote.year} </span> 
                   
-                 </p>` }
+                 </p>` 
+              
+                }
               
 
   printQuote();
